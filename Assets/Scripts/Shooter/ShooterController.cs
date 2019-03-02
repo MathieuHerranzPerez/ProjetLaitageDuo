@@ -7,6 +7,7 @@ public class ShooterController : MonoBehaviour
 
     [SerializeField] private float Speed = 5f;
     [SerializeField] private float LookSensitivity = 3f;
+    public bool verticalMovementAllowed = true;
 
     private ShooterMotor motor;
 
@@ -19,12 +20,25 @@ public class ShooterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float _xMov = Input.GetAxisRaw("Horizontal");
+        
 
+        // Horizontal Movement
+        float _xMov = Input.GetAxisRaw("Horizontal");
         Vector3 _motorHorizontal = transform.right * _xMov;
 
-        Vector3 _velocity = (_motorHorizontal ).normalized * Speed;
+        //Vertical Movement (if allowed)
+        float _zMov;
+        Vector3 _motorVertical = Vector3.zero;
+        if (verticalMovementAllowed)
+        {
+            _zMov = Input.GetAxisRaw("Vertical");
+            _motorVertical = transform.forward * _zMov;
+        }
 
+        // Calculate velocity
+        Vector3 _velocity = (_motorHorizontal + _motorVertical).normalized * Speed;
+
+        // Move
         motor.Move(_velocity);
 
         float _yRot = Input.GetAxisRaw("Mouse X");
