@@ -49,6 +49,10 @@ public class ShooterFire : MonoBehaviour
     public Material GreenMaterial;
     public Material RedMaterial;
 
+    // UI cursor
+    [SerializeField]
+    private Image cursorImage;
+
     // Start is called before the first frame update
     private void OnEnable()
     {
@@ -87,6 +91,8 @@ public class ShooterFire : MonoBehaviour
         else if (Input.GetButton(m_FireButton) && !m_Fired)
         {
             m_CurrentLaunchForce += m_ChargeSpeed * Time.deltaTime;
+            // fill the UI cursor
+            cursorImage.fillAmount = m_CurrentLaunchForce / m_MaxLaunchForce;
         }
         else if (Input.GetButtonUp(m_FireButton) && !m_Fired)
         {
@@ -119,6 +125,9 @@ public class ShooterFire : MonoBehaviour
 
     private void Fire()
     {
+        // reset the cursor
+        cursorImage.fillAmount = 0;
+
         // Instantiate and launch the shell.
         bool canFire =false;
         if (m_currentShell == m_BlueShell && PlayerStats.NbBlueAmmo > 0)
