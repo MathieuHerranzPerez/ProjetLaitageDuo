@@ -5,26 +5,42 @@ using UnityEngine;
 
 public class ShooterFire : MonoBehaviour
 {
-
+    // Weapon Stats
     public Transform m_FireTransform;
     public float m_MinLaunchForce = 10f;
     public float m_MaxLaunchForce = 30f;
     public float m_MaxChargeTime = 0.75f;
+
+    
+    private float m_CurrentLaunchForce;
+    private float m_ChargeSpeed;
+    private bool m_Fired;
+
     
 
-
+    // Different Shell types from which to choose
     public  Rigidbody m_GreenShell;
     public  Rigidbody m_RedShell;
     public  Rigidbody m_BlueShell;
 
-    private float m_CurrentLaunchForce;
-    private float m_ChargeSpeed;
-    private bool m_Fired;
+    // Display of current shell type
+    public MeshRenderer m_AmmoTypeDisplay;
+
+    // Current shell type to be fired
     public Rigidbody m_currentShell;
+
+    
+    
+    // Player Controls
     private string m_FireButton;
     private string m_RedShellSelectionButton;
     private string m_GreenShellSelectionButton;
     private string m_BlueShellSelectionButton;
+
+    // Material
+    public Material BlueMaterial;
+    public Material GreenMaterial;
+    public Material RedMaterial;
 
     // Start is called before the first frame update
     private void OnEnable()
@@ -65,17 +81,21 @@ public class ShooterFire : MonoBehaviour
             Fire();
         }
 
+        // Chnage ammo type on button down
         if (Input.GetButtonDown(m_RedShellSelectionButton))
         {
             ChangeAmmo(m_RedShell);
+            m_AmmoTypeDisplay.material = RedMaterial;
         }
         if (Input.GetButtonDown(m_GreenShellSelectionButton))
         {
             ChangeAmmo(m_GreenShell);
+            m_AmmoTypeDisplay.material = GreenMaterial;
         }
         if (Input.GetButtonDown(m_BlueShellSelectionButton))
         {
             ChangeAmmo(m_BlueShell);
+            m_AmmoTypeDisplay.material = BlueMaterial;
         }
     }
 
