@@ -101,13 +101,14 @@ public class ShooterFire : MonoBehaviour
         }
         if (Input.GetButtonDown(m_GreenShellSelectionButton))
         {
-            ChangeAmmo(m_GreenShell);
-            m_AmmoTypeDisplay.material = GreenMaterial;
+            ChangeAmmo(m_BlueShell);
+            m_AmmoTypeDisplay.material = BlueMaterial;
         }
         if (Input.GetButtonDown(m_BlueShellSelectionButton))
         {
-            ChangeAmmo(m_BlueShell);
-            m_AmmoTypeDisplay.material = BlueMaterial;
+            ChangeAmmo(m_GreenShell);
+            m_AmmoTypeDisplay.material = GreenMaterial;
+            
         }
     }
 
