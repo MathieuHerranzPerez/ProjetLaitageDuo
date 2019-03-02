@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public abstract class Enemy : MonoBehaviour
@@ -20,7 +18,10 @@ public abstract class Enemy : MonoBehaviour
         stats.currentHP = stats.maxHP;
     }
 
-    //public abstract void TakeDamageFormCurrentBullet(float amount, ShellExplosion bullet);
+    public virtual void TakeDamageFormCurrentBullet(float amount, ShellExplosion bullet)
+    {
+        Debug.Log("Hit : "+ amount); //affD
+    }
 
     protected void TakeDamage(float amount)
     {

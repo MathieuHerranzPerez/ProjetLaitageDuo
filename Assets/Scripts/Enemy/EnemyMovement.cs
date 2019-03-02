@@ -9,7 +9,7 @@ public class EnemyMovement : MonoBehaviour
     public GameObject deathEffect;
     public GameObject hitEffect;
     [Header("Sound")]
-    public AudioClip soundWhenDie;
+    public AudioClip soundExplosion;
     [Range(0.05f, 1f)]
     public float volume = 0.5f;
     public GameObject audioPlayer;
@@ -57,12 +57,12 @@ public class EnemyMovement : MonoBehaviour
         GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(effect, 3f);
 
-        if (soundWhenDie)
+        if (soundExplosion)
         {
             // invoke another gameobject to play the sound
             GameObject soundGO = (GameObject)Instantiate(audioPlayer, transform.position, transform.rotation);
             AudioPlayer _audioPlayer = soundGO.GetComponent<AudioPlayer>();
-            _audioPlayer.Play(soundWhenDie, volume);
+            _audioPlayer.Play(soundExplosion, volume);
             Destroy(soundGO, 1f);
         }
 
