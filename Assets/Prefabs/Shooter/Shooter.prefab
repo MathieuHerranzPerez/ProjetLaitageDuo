@@ -1055,6 +1055,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 5
   LookSensitivity: 3
+  verticalMovementAllowed: 1
 --- !u!136 &447405168
 CapsuleCollider:
   m_ObjectHideFlags: 0
