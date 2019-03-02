@@ -49,9 +49,15 @@ public class ShooterFire : MonoBehaviour
     public Material GreenMaterial;
     public Material RedMaterial;
 
+
+
     // UI cursor
     [SerializeField]
     private Image cursorImage;
+    // Color cursor
+    public Color blueColor;
+    public Color greenColor;
+    public Color redColor;
 
     // Start is called before the first frame update
     private void OnEnable()
@@ -104,17 +110,20 @@ public class ShooterFire : MonoBehaviour
         {
             ChangeAmmo(m_RedShell);
             m_AmmoTypeDisplay.material = RedMaterial;
+            cursorImage.color = redColor;
         }
         if (Input.GetButtonDown(m_GreenShellSelectionButton))
         {
             ChangeAmmo(m_BlueShell);
             m_AmmoTypeDisplay.material = BlueMaterial;
+            cursorImage.color = blueColor;
         }
         if (Input.GetButtonDown(m_BlueShellSelectionButton))
         {
             ChangeAmmo(m_GreenShell);
             m_AmmoTypeDisplay.material = GreenMaterial;
-            
+            cursorImage.color = greenColor;
+
         }
     }
 

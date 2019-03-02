@@ -166,10 +166,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ExplosionParticles: {fileID: 1092757033244949638}
-  m_MaxDamage: 150
-  m_ExplosionForce: 125
-  m_MaxLifeTime: 2
-  m_ExplosionRadius: 5
+  m_MaxDamage: 200
+  m_ExplosionForce: 500
+  m_MaxLifeTime: 4
+  m_ExplosionRadius: 15
 --- !u!1001 &1092757033262891408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -224,6 +224,18 @@ PrefabInstance:
     - target: {fileID: 486730, guid: 781c48fbd6cb6b34985d1207638fc142, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 486730, guid: 781c48fbd6cb6b34985d1207638fc142, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 486730, guid: 781c48fbd6cb6b34985d1207638fc142, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 486730, guid: 781c48fbd6cb6b34985d1207638fc142, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 19861370, guid: 781c48fbd6cb6b34985d1207638fc142, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
