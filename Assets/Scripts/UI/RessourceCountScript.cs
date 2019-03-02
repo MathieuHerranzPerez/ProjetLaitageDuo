@@ -24,5 +24,7 @@ public class RessourceCountScript : MonoBehaviour
             text.text = PlayerStats.NbStar.ToString();
         else if (value == 2)
             text.text = PlayerStats.NbTriangle.ToString();
+        else if (value == 3)
+            text.text = PlayerStats.NbSquare.ToString();
     }
 }
