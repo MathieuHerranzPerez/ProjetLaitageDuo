@@ -6,7 +6,11 @@ public class EnemySpawner : MonoBehaviour
 
     public void SpawnEnemy(GameObject enemyGO)
     {
-        GameObject enemyCloneGO = (GameObject) Instantiate(enemyGO, transform.position, transform.rotation);
+        // get the direction
+        Vector3 relativePos = enemyTarget.position - transform.position;
+        Quaternion rotation = Quaternion.LookRotation(relativePos);
+
+        GameObject enemyCloneGO = (GameObject) Instantiate(enemyGO, transform.position, rotation);
         enemyCloneGO.GetComponent<EnemyMovement>().SetTarget(enemyTarget);
     }
 

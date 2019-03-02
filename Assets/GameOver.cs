@@ -13,6 +13,29 @@ public class GameOver : MonoBehaviour
     [SerializeField]
     private Text bestTimetext;
 
+
+    // intern
+    private float bestTime;
+
+    void OnEnable()
+    {
+        float timeSurvived = PlayerStats.TimeSurvived;
+        timeText.text = string.Format("{00:00:00.0}", timeSurvived);
+
+        
+        PlayerPrefs.GetFloat("bestTime", bestTime);
+
+        if(timeSurvived > bestTime)
+        {
+            PlayerPrefs.SetFloat("bestTime", timeSurvived);
+            bestTimetext.text = string.Format("{00:00:00.0}", timeSurvived);
+        }
+        else
+        {
+            bestTimetext.text = string.Format("{00:00:00.0}", bestTime);
+        }
+    }
+
     public void Retry()
     {
         Time.timeScale = 1f;                            // unfreeze

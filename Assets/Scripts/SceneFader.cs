@@ -90,7 +90,7 @@ public class SceneFader : MonoBehaviour
         }// -- /FADE IN --
 
 
-        while (timeLoadingScreen <= 3f || !operation.isDone)
+        while (/*timeLoadingScreen <= 3f || */!operation.isDone)
         {
             if (timeLoadingScreen > 3f)
             {

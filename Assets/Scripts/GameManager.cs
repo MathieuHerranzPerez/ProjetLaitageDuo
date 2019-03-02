@@ -13,7 +13,14 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(IsGameOver) { }
+
+            if (Input.GetKeyDown(KeyCode.L)) // TODO delete
+            {
+                PlayerStats.Lives = 0;
+            }
+
+
+        if (IsGameOver) { }
         else if(PlayerStats.Lives <= 0)
         {
             EndGame();
@@ -25,6 +32,7 @@ public class GameManager : MonoBehaviour
         MouseManager.lockMouse = false;                 // unlock the cursor
         IsGameOver = true;
         gameOverUI.SetActive(true);
-        Time.timeScale = 0f;        // freeze the game
+        Debug.Log("Active"); // affD
+        Time.timeScale = 0f;                            // freeze the game
     }
 }
