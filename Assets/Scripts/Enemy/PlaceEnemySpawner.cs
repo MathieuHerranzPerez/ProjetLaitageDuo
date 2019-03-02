@@ -24,7 +24,7 @@ public class PlaceEnemySpawner : MonoBehaviour
     public void SpawnEnemy(GameObject enemyGO)
     {
         // random
-        int numSpawner = Random.Range(0, nbChildSpawners - 1);
+        int numSpawner = Random.Range(0, nbChildSpawners);
 
         enemySpawner[numSpawner].SpawnEnemy(enemyGO);
     }

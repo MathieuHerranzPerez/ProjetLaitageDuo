@@ -41,7 +41,9 @@ public abstract class Enemy : MonoBehaviour
     protected void Die()
     {
         // add money to the user
-        // PlayerStats.Money += stats.worth;
+        PlayerStats.Money += stats.worth;
+        // increment nb enemies killed
+        ++ PlayerStats.NbEnemyKilled;
 
         // effect on death
         // GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);

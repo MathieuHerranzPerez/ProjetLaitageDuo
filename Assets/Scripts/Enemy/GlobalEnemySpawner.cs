@@ -26,8 +26,8 @@ public class GlobalEnemySpawner : MonoBehaviour
                 time = 0f;
 
                 // spawn a random enemy randomly
-                int numEnemyToSpawn = Random.Range(0, listEnemyGO.Count - 1);
-                int numSpawner = Random.Range(0, listPlaceEnemySpawner.Count - 1);
+                int numEnemyToSpawn = Random.Range(0, listEnemyGO.Count);
+                int numSpawner = Random.Range(0, listPlaceEnemySpawner.Count);
 
                 // spawn the enemy
                 listPlaceEnemySpawner[numSpawner].SpawnEnemy(listEnemyGO[numEnemyToSpawn]);
