@@ -22,7 +22,7 @@ public abstract class Enemy : MonoBehaviour
         stats.currentHP = stats.maxHP;
     }
 
-    //public abstract void TakeDamageFormCurrentBullet(float amount, ShellExplosion bullet);
+    public abstract void TakeDamageFormCurrentBullet(float amount, ShellExplosion bullet);
 
     protected void TakeDamage(float amount)
     {
