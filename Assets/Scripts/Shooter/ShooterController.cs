@@ -20,12 +20,10 @@ public class ShooterController : MonoBehaviour
     void Update()
     {
         float _xMov = Input.GetAxisRaw("Horizontal");
-        float _zMov = Input.GetAxisRaw("Vertical");
 
         Vector3 _motorHorizontal = transform.right * _xMov;
-        Vector3 _motorVetical = transform.forward * _zMov;
 
-        Vector3 _velocity = (_motorHorizontal + _motorVetical).normalized * Speed;
+        Vector3 _velocity = (_motorHorizontal ).normalized * Speed;
 
         motor.Move(_velocity);
 

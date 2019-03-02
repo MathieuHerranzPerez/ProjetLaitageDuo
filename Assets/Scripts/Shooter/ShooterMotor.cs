@@ -33,7 +33,6 @@ public class ShooterMotor : MonoBehaviour
     void FixedUpdate()
     {
         PerformMovement();
-        PerformRotation();
         PerformCameraRotation();
     }
 
@@ -44,11 +43,6 @@ public class ShooterMotor : MonoBehaviour
         {
             cam.transform.Rotate(-cameraRotation);
         }
-    }
-
-    private void PerformRotation()
-    {
-        rb.MoveRotation(rb.rotation*Quaternion.Euler(rotation));
     }
 
     private void PerformMovement()
@@ -66,6 +60,6 @@ public class ShooterMotor : MonoBehaviour
 
     public void RotateCamera(Vector3 _cameraRotation)
     {
-        rotation = _cameraRotation;
+        cameraRotation = _cameraRotation;
     }
 }
