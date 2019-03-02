@@ -4,10 +4,10 @@ public abstract class ShellExplosion : MonoBehaviour
 {
     public LayerMask m_EnemyMask;
     public ParticleSystem m_ExplosionParticles;
-    public float m_MaxDamage = 100f;
+    public float m_MaxDamage = 150f;
     public float m_ExplosionForce = 120f;
     public float m_MaxLifeTime = 2f;
-    public float m_ExplosionRadius = 5f;
+    public float m_ExplosionRadius = 100f;
 
 
     private void Start()
@@ -19,7 +19,10 @@ public abstract class ShellExplosion : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // Find all the tanks in an area around the shell and damage them.
-        Collider[] colliders = Physics.OverlapSphere(transform.position, m_ExplosionRadius, m_EnemyMask);
+        Collider[] colliders = Physics.OverlapSphere(transform.position, m_ExplosionRadius/*, m_EnemyMask*/);
+
+        Debug.Log("transform : " + transform.position); // affD
+        Debug.Log("Tableau collider : " + colliders);
 
         foreach (Collider collider in colliders)
         {

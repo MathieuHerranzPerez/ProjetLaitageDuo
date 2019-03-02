@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 7301850778822087919}
   - component: {fileID: 7822811555171465784}
   - component: {fileID: 5157798285322353990}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RedEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}

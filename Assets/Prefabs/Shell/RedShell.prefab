@@ -164,10 +164,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EnemyMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   m_ExplosionParticles: {fileID: 2506605194860803784}
-  m_MaxDamage: 100
-  m_ExplosionForce: 1000
+  m_MaxDamage: 150
+  m_ExplosionForce: 125
   m_MaxLifeTime: 2
   m_ExplosionRadius: 5
 --- !u!1001 &2506605194846768094

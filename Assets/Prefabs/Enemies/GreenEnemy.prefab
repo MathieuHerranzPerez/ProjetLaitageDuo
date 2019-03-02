@@ -426,9 +426,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6639308098219819137}
   - component: {fileID: 8316465429094156677}
-  - component: {fileID: 8840374821816641362}
-  - component: {fileID: 5884878224917340204}
-  m_Layer: 0
+  - component: {fileID: 8395446122786543582}
+  - component: {fileID: 2639615656197389645}
+  m_Layer: 9
   m_Name: GreenEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -466,7 +466,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8840374821816641362
+--- !u!114 &8395446122786543582
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -475,7 +475,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7836181988610595926}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b75894544ae5c2841ada42d22e0ad928, type: 3}
+  m_Script: {fileID: 11500000, guid: 7197a7320ca62f443b7c5ac2200c15cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   stats:
@@ -489,7 +489,7 @@ MonoBehaviour:
   hitEffect: {fileID: 0}
   healthBarCanvas: {fileID: 1298357577270368416}
   healthBar: {fileID: 7445394074748593969}
---- !u!114 &5884878224917340204
+--- !u!114 &2639615656197389645
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
