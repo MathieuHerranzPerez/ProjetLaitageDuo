@@ -20,7 +20,7 @@ public abstract class Enemy : MonoBehaviour
 
     public virtual void TakeDamageFormCurrentBullet(float amount, ShellExplosion bullet)
     {
-        Debug.Log("Hit : "+ amount); //affD
+
     }
 
     protected void TakeDamage(float amount)

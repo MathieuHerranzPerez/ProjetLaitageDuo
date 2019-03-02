@@ -18,25 +18,45 @@ public abstract class ShellExplosion : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Find all the tanks in an area around the shell and damage them.
+        //Collider[] colliders = Physics.OverlapSphere(transform.position, m_ExplosionRadius, m_EnemyMask);
+
+        //foreach (Collider collider in colliders)
+        //{
+        //    Rigidbody targetRigidBody = collider.GetComponent<Rigidbody>();
+        //    if (!targetRigidBody)
+        //        continue;
+        //    targetRigidBody.AddExplosionForce(m_ExplosionForce, transform.position, m_ExplosionRadius);
+        //    Enemy target = targetRigidBody.GetComponent<Enemy>();
+        //    if (!target)
+        //        continue;
+
+        //    Enemy enemy = collider.GetComponent<Enemy>();
+        //    if (enemy)
+        //    {
+        //        float damageAmount = CalculateDamage(enemy.gameObject.transform.position);
+        //        enemy.TakeDamageFormCurrentBullet(damageAmount, this);
+        //    }
+        //}
+        //m_ExplosionParticles.transform.parent = null;
+        //m_ExplosionParticles.Play();
+
+        //Destroy(m_ExplosionParticles.gameObject, m_ExplosionParticles.main.duration);
+        //Destroy(gameObject);
+
         Collider[] colliders = Physics.OverlapSphere(transform.position, m_ExplosionRadius, m_EnemyMask);
 
         foreach (Collider collider in colliders)
         {
-            //Rigidbody targetRigidBody = collider.GetComponent<Rigidbody>();
-            //if (!targetRigidBody)
-            //    continue;
-            //targetRigidBody.AddExplosionForce(m_ExplosionForce, transform.position, m_ExplosionRadius);
-            //Enemy target = targetRigidBody.GetComponent<Enemy>();
-            //if (!target)
-            //    continue;
+            Rigidbody targetRigidBody = collider.GetComponent<Rigidbody>();
+            if (!targetRigidBody)
+                continue;
+            targetRigidBody.AddExplosionForce(m_ExplosionForce, transform.position, m_ExplosionRadius);
+            Enemy target = targetRigidBody.GetComponent<Enemy>();
+            if (!target)
+                continue;
 
-            Enemy enemy = collider.GetComponent<Enemy>();
-            if (enemy)
-            {
-                float damageAmount = CalculateDamage(enemy.gameObject.transform.position);
-                enemy.TakeDamageFormCurrentBullet(damageAmount, this);
-            }
+            float damageAmount = CalculateDamage(targetRigidBody.position);
+            target.TakeDamageFormCurrentBullet(damageAmount, this);
         }
         m_ExplosionParticles.transform.parent = null;
         m_ExplosionParticles.Play();
