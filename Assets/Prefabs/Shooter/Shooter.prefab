@@ -133,12 +133,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332627612}
-  m_LocalRotation: {x: 0.6647322, y: -0, z: -0, w: 0.7470817}
-  m_LocalPosition: {x: 0, y: -0.28499997, z: 0.014}
-  m_LocalScale: {x: 0.16280729, y: 0.01904725, z: 0.18678693}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.21010844, z: 0.06821176}
+  m_LocalScale: {x: 1.0663762, y: 0.04427815, z: 1.2042928}
   m_Children: []
-  m_Father: {fileID: 4324248138999669742}
-  m_RootOrder: 1
+  m_Father: {fileID: 472120525178448753}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 83.324005, y: 0, z: 0}
 --- !u!33 &1332627615
 MeshFilter:
@@ -213,7 +213,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 472120525178448753}
-  - {fileID: 1332627613}
   m_Father: {fileID: 676378984898640991}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -249,6 +248,7 @@ Transform:
   - {fileID: 564226801365603469}
   - {fileID: 2276815335977755473}
   - {fileID: 7316336557954488594}
+  - {fileID: 1332627613}
   m_Father: {fileID: 4324248138999669742}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 83.324005, y: 0, z: 0}
@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 2079998236696606180}
   - component: {fileID: 4320171971623573353}
   m_Layer: 0
-  m_Name: Text
+  m_Name: RedText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -375,7 +375,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 22
+  m_Text: 5
 --- !u!1 &2886712313464351549
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,7 +700,7 @@ GameObject:
   - component: {fileID: 548777660352530846}
   - component: {fileID: 1401682597051778435}
   m_Layer: 0
-  m_Name: Text
+  m_Name: GreenText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -766,7 +766,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 22
+  m_Text: 5
 --- !u!1 &7645622650654980637
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,7 +878,7 @@ GameObject:
   - component: {fileID: 5825278424275205588}
   - component: {fileID: 455014063932600656}
   m_Layer: 0
-  m_Name: Text
+  m_Name: BlueText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -944,7 +944,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 22
+  m_Text: 5
 --- !u!1 &8371796209150720582
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,7 +1020,14 @@ MonoBehaviour:
     type: 3}
   m_BlueShell: {fileID: 54941456242841146, guid: f4e4526b74430f34a96833dd66afdd93,
     type: 3}
+  m_AmmoTypeDisplay: {fileID: 1332627614}
+  textGreenAmmo: {fileID: 1401682597051778435}
+  textRedAmmo: {fileID: 4320171971623573353}
+  textBlueAmmo: {fileID: 455014063932600656}
   m_currentShell: {fileID: 0}
+  BlueMaterial: {fileID: 2100000, guid: a27903f6dba63c54dba28d83f1e85f6b, type: 2}
+  GreenMaterial: {fileID: 2100000, guid: 884fb452c43945a47ae2e02e596e3fc7, type: 2}
+  RedMaterial: {fileID: 2100000, guid: 99a2b35bb40848a468d946e7b7aa2f20, type: 2}
 --- !u!114 &8142035567008877912
 MonoBehaviour:
   m_ObjectHideFlags: 0

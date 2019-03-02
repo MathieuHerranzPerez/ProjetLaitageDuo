@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShooterFire : MonoBehaviour
 {
@@ -25,6 +26,11 @@ public class ShooterFire : MonoBehaviour
 
     // Display of current shell type
     public MeshRenderer m_AmmoTypeDisplay;
+
+    // Display text fields for ammo stock
+    public Text textGreenAmmo;
+    public Text textRedAmmo;
+    public Text textBlueAmmo;
 
     // Current shell type to be fired
     public Rigidbody m_currentShell;
@@ -56,6 +62,10 @@ public class ShooterFire : MonoBehaviour
         m_BlueShellSelectionButton = "Blue";
         m_ChargeSpeed = (m_MaxLaunchForce - m_MinLaunchForce) / m_MaxChargeTime;
         m_currentShell = m_BlueShell;
+        m_AmmoTypeDisplay.material = BlueMaterial;
+        textRedAmmo.text = PlayerStats.NbRedAmmo.ToString();
+        textGreenAmmo.text = PlayerStats.NbRedAmmo.ToString();
+        textBlueAmmo.text = PlayerStats.NbBlueAmmo.ToString();
     }
 
     private void Update()
@@ -107,10 +117,34 @@ public class ShooterFire : MonoBehaviour
     private void Fire()
     {
         // Instantiate and launch the shell.
-        m_Fired = true;
+        bool canFire =false;
+        if (m_currentShell == m_BlueShell && PlayerStats.NbBlueAmmo > 0)
+        {
+            PlayerStats.NbBlueAmmo--;
+            textBlueAmmo.text = PlayerStats.NbBlueAmmo.ToString();
+            canFire = true;
+        }
+        else if(m_currentShell == m_RedShell && PlayerStats.NbRedAmmo > 0)
+        {
+            PlayerStats.NbRedAmmo--;
+            textRedAmmo.text = PlayerStats.NbRedAmmo.ToString();
+            canFire = true;
+        }
+        else if(m_currentShell == m_GreenShell && PlayerStats.NbGreenAmmo > 0)
+        {
+            PlayerStats.NbGreenAmmo--;
+            textGreenAmmo.text = PlayerStats.NbGreenAmmo.ToString();
+            canFire = true;
+        }
 
-        Rigidbody shellInstance = Instantiate(m_currentShell, m_FireTransform.position, m_FireTransform.rotation) as Rigidbody;
-        shellInstance.velocity = m_CurrentLaunchForce * m_FireTransform.forward;
-        m_CurrentLaunchForce = m_MinLaunchForce;
+        // If we have enough ammo, actually fire a shell
+        if(canFire == true)
+        {
+            m_Fired = true;
+            Rigidbody shellInstance = Instantiate(m_currentShell, m_FireTransform.position, m_FireTransform.rotation) as Rigidbody;
+            shellInstance.velocity = m_CurrentLaunchForce * m_FireTransform.forward;
+            m_CurrentLaunchForce = m_MinLaunchForce;
+        }
+        
     }
 }

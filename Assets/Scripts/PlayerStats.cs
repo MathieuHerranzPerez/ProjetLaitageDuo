@@ -6,9 +6,9 @@ public class PlayerStats : MonoBehaviour
     public static int Lives;
     public static int NbEnemyKilled;
     public static float TimeSurvived;
-    public static int NbGreenAmo;
-    public static int NbRedAmo;
-    public static int NbBlueAmo;
+    public static int NbGreenAmmo;
+    public static int NbRedAmmo;
+    public static int NbBlueAmmo;
 
     public int startMoney = 20;
     public int startLives = 3;
@@ -22,9 +22,9 @@ public class PlayerStats : MonoBehaviour
     {
         Money = startMoney;
         Lives = startLives;
-        NbGreenAmo = startNbGreenAmo;
-        NbRedAmo = startNbRedAmo;
-        NbBlueAmo = startNbBlueAmo;
+        NbGreenAmmo = startNbGreenAmo;
+        NbRedAmmo = startNbRedAmo;
+        NbBlueAmmo = startNbBlueAmo;
 
         NbEnemyKilled = 0;
         TimeSurvived = 0f;
