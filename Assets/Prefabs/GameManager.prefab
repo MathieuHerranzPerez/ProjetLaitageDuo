@@ -163,9 +163,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startMoney: 20
   startLives: 3
-  startNbGreenAmo: 5
-  startNbRedAmo: 5
-  startNbBlueAmo: 5
+  startNbGreenAmmo: 20
+  startNbRedAmmo: 20
+  startNbBlueAmmo: 20
+  startNbStar: 0
+  startNbTriangle: 0
+  startNbRound: 0
+  startNbSquare: 0
 --- !u!114 &3404782588939035236
 MonoBehaviour:
   m_ObjectHideFlags: 0

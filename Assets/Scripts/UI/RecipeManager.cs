@@ -72,18 +72,18 @@ public class RecipeManager : MonoBehaviour
     {
         if(CheckRecipe(RecipeRed))
         {
-            PlayerStats.NbRedAmo += bonusAmo;
-            Debug.Log("red munitions + 5 : " + PlayerStats.NbRedAmo);
+            PlayerStats.NbRedAmmo += bonusAmo;
+            Debug.Log("red munitions + 5 : " + PlayerStats.NbRedAmmo);
         }
         if (CheckRecipe(RecipeGreen))
         {
-            PlayerStats.NbGreenAmo += bonusAmo;
-            Debug.Log("green munitions + 5 : " + PlayerStats.NbGreenAmo );
+            PlayerStats.NbGreenAmmo += bonusAmo;
+            Debug.Log("green munitions + 5 : " + PlayerStats.NbGreenAmmo );
         }
         if (CheckRecipe(RecipeBlue))
         {
-            PlayerStats.NbBlueAmo += bonusAmo;
-            Debug.Log("blue munitions + 5 : " + PlayerStats.NbBlueAmo);
+            PlayerStats.NbBlueAmmo += bonusAmo;
+            Debug.Log("blue munitions + 5 : " + PlayerStats.NbBlueAmmo);
         }
 
 
