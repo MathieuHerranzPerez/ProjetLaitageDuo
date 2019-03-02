@@ -23,7 +23,7 @@ public class ShooterController : MonoBehaviour
         
 
         // Horizontal Movement
-        float _xMov = Input.GetAxisRaw("Horizontal");
+        float _xMov = Input.GetAxisRaw("ShooterHorizontal");
         Vector3 _motorHorizontal = transform.right * _xMov;
 
         //Vertical Movement (if allowed)
@@ -31,7 +31,7 @@ public class ShooterController : MonoBehaviour
         Vector3 _motorVertical = Vector3.zero;
         if (verticalMovementAllowed)
         {
-            _zMov = Input.GetAxisRaw("Vertical");
+            _zMov = Input.GetAxisRaw("ShooterVertical");
             _motorVertical = transform.forward * _zMov;
         }
 
