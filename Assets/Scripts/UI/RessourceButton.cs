@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.UIElements;
+using UnityEngine.UI;
 
 public class RessourceButton : MonoBehaviour
 {
     public int value; // 0 : round , 1 : star , 2 : triangle, 3 : square
-  
+    Button button;
 
     // Start is called before the first frame update
     void Awake()
@@ -16,6 +16,7 @@ public class RessourceButton : MonoBehaviour
 
     void Start()
     {
+        button = GetComponent<Button>();
     }
 
     // Update is called once per frame
@@ -42,6 +43,10 @@ public class RessourceButton : MonoBehaviour
 
             // check if a recipe is available
             RecipeManager.ressourcesUpdated();
+
+            // disable and check if the combinaison of disabled buttons is a pattern
+            button.interactable = false;
+            RecipeManager.checkButtonCombinaison();
         }
        
     }
