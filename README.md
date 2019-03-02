@@ -17,9 +17,21 @@ Le supplier ravitaille le shooter en munitions, pour cela il a à sa disposition
 - Pour obtenir des ressources, il peut actionner des leviers en dépensant de l'énergie. Une fois un levier actionné, il ne peut pas le désactiver.
 - Afin de débloquer les leviers, il doit actionner tout les leviers reliés par un circuit.
 
-#### Règles apparition ennemis
+####Règles apparition ennemis
 1 quadrant débloqué toute les 20 secondes
 1 vague toute les 10 secondes
 Phase 1 :  2 ennemis/vague 
 Phase 2 :  5 ennemis/vague
 Phase 3 :  10 ennemis/vague
+
+
+####Ressources
+shellFiring.mp3 https://freesound.org/people/qubodup/sounds/168707/  CreativeCOmmons 0
+teleportation https://freesound.org/people/ruslanas.com/sounds/269510/ CC3.0
+Telport.wav  https://freesound.org/people/Leszek_Szary/sounds/146728/ CC0
+NoAmmo.wav https://freesound.org/people/KlawyKogut/sounds/154934/ CC0
+Recharging ammo https://freesound.org/people/InspectorJ/sounds/458585/ CC3.0
+Missile Explosion https://freesound.org/people/smcameron/sounds/51467/ CC3.0
+
+Background music http://freemusicarchive.org/music/Unconceptual/Unconceptual_LP/Unconceptual_-_Unconceptual_LP_-_10_Haste CC4.0
+

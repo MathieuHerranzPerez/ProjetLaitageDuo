@@ -4,6 +4,8 @@ public abstract class ShellExplosion : MonoBehaviour
 {
     public LayerMask m_EnemyMask;
     public ParticleSystem m_ExplosionParticles;
+    public AudioSource m_explosionAudio;
+
     public float m_MaxDamage = 150f;
     public float m_ExplosionForce = 120f;
     public float m_MaxLifeTime = 2f;
@@ -60,6 +62,7 @@ public abstract class ShellExplosion : MonoBehaviour
         }
         m_ExplosionParticles.transform.parent = null;
         m_ExplosionParticles.Play();
+        m_explosionAudio.Play();
 
         Destroy(m_ExplosionParticles.gameObject, m_ExplosionParticles.main.duration);
         Destroy(gameObject);

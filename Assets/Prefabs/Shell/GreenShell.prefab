@@ -166,6 +166,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ExplosionParticles: {fileID: 1092757033244949638}
+  m_explosionAudio: {fileID: 6375477161432766740}
   m_MaxDamage: 150
   m_ExplosionForce: 125
   m_MaxLifeTime: 2
@@ -248,6 +249,12 @@ Transform:
 --- !u!198 &1092757033244949638 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 19807510, guid: 781c48fbd6cb6b34985d1207638fc142,
+    type: 3}
+  m_PrefabInstance: {fileID: 1092757033262891408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &6375477161432766740 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6291667254167804036, guid: 781c48fbd6cb6b34985d1207638fc142,
     type: 3}
   m_PrefabInstance: {fileID: 1092757033262891408}
   m_PrefabAsset: {fileID: 0}

@@ -166,6 +166,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ExplosionParticles: {fileID: 5976427531843288496}
+  m_explosionAudio: {fileID: 5753550741852507359}
   m_MaxDamage: 150
   m_ExplosionForce: 300
   m_MaxLifeTime: 2
@@ -177,6 +178,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4924383941350802}
     m_Modifications:
+    - target: {fileID: 195792, guid: 89e78efe92dfe5a42837b392cdb0bf9e, type: 3}
+      propertyPath: m_Name
+      value: BlueShellExplosion
+      objectReference: {fileID: 0}
     - target: {fileID: 486730, guid: 89e78efe92dfe5a42837b392cdb0bf9e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -221,10 +226,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 195792, guid: 89e78efe92dfe5a42837b392cdb0bf9e, type: 3}
-      propertyPath: m_Name
-      value: BlueShellExplosion
-      objectReference: {fileID: 0}
     - target: {fileID: 19967326, guid: 89e78efe92dfe5a42837b392cdb0bf9e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -240,6 +241,12 @@ Transform:
 --- !u!198 &5976427531843288496 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 19807510, guid: 89e78efe92dfe5a42837b392cdb0bf9e,
+    type: 3}
+  m_PrefabInstance: {fileID: 5976427531825053862}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &5753550741852507359 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2100998248322944121, guid: 89e78efe92dfe5a42837b392cdb0bf9e,
     type: 3}
   m_PrefabInstance: {fileID: 5976427531825053862}
   m_PrefabAsset: {fileID: 0}
