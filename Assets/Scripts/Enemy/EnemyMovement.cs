@@ -32,7 +32,6 @@ public class EnemyMovement : MonoBehaviour
     public void SetTarget(Transform targetTransformWaypoint)
     {
         this.target = targetTransformWaypoint;
-        Debug.Log("Target : " + target); // affD
     }
 
 
