@@ -41,6 +41,7 @@ public class PlayerStats : MonoBehaviour
         TimeSurvived = 0f;
     }
 
+
     void Update()
     {
         TimeSurvived += Time.deltaTime;

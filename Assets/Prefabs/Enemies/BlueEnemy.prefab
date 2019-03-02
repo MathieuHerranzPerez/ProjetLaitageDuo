@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3372544760535903877}
   - component: {fileID: 9218652906362569046}
   - component: {fileID: 1437005960633296496}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 711445306829135116}
   - component: {fileID: 9003716313794277101}
   - component: {fileID: 8363689794484969534}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 3766965952862605646}
   - component: {fileID: 4628788937206103079}
   - component: {fileID: 786481087094642896}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 3412778130765064277}
   - component: {fileID: 3256084127013526224}
   - component: {fileID: 6775637338801325655}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -350,7 +350,7 @@ GameObject:
   - component: {fileID: 70679615550509244}
   - component: {fileID: 8059744264687534266}
   - component: {fileID: 1304202389256206053}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EnemyGFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,9 +426,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5719886474181232526}
   - component: {fileID: 6928951605943291530}
-  - component: {fileID: 7632972410737008733}
-  - component: {fileID: 4821622819064850211}
-  m_Layer: 0
+  - component: {fileID: 2581805473102993393}
+  - component: {fileID: 1828810495012570483}
+  - component: {fileID: 5428622783612195253}
+  m_Layer: 9
   m_Name: BlueEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -466,7 +467,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7632972410737008733
+--- !u!114 &2581805473102993393
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -475,7 +476,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9222571561110002521}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b75894544ae5c2841ada42d22e0ad928, type: 3}
+  m_Script: {fileID: 11500000, guid: 13c54aef7419cbb4cb71ed18f4b2690b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   stats:
@@ -485,11 +486,9 @@ MonoBehaviour:
     moveSpeed: 2
     worth: 10
     isBoss: 0
-  deathEffect: {fileID: 0}
-  hitEffect: {fileID: 0}
   healthBarCanvas: {fileID: 91796778084802479}
   healthBar: {fileID: 8363689794484969534}
---- !u!114 &4821622819064850211
+--- !u!114 &1828810495012570483
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -501,3 +500,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28c51aa173a35e74ca3c510e93c6d477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathEffect: {fileID: 605651287483650282, guid: 31c787b6e4521144bbdb7b9dbab146f1,
+    type: 3}
+  hitEffect: {fileID: 0}
+  soundExplosion: {fileID: 8300000, guid: 55fed8b4672f3254db1d2e5dcf529e12, type: 3}
+  volume: 0.5
+  audioPlayer: {fileID: 1970248497662627157, guid: e62277cacce68314791a07fdd3cd8dd9,
+    type: 3}
+--- !u!54 &5428622783612195253
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9222571561110002521}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0

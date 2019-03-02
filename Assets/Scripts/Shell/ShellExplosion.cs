@@ -1,14 +1,13 @@
 ﻿using UnityEngine;
 
-public class ShellExplosion : MonoBehaviour
+public abstract class ShellExplosion : MonoBehaviour
 {
     public LayerMask m_EnemyMask;
     public ParticleSystem m_ExplosionParticles;
-    public float m_MaxDamage = 100f;
-    public float m_ExplosionForce = 1000f;
+    public float m_MaxDamage = 150f;
+    public float m_ExplosionForce = 120f;
     public float m_MaxLifeTime = 2f;
-    public float m_ExplosionRadius = 5f;
-    private string Color;
+    public float m_ExplosionRadius = 100f;
 
 
     private void Start()
@@ -19,22 +18,46 @@ public class ShellExplosion : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Find all the tanks in an area around the shell and damage them.
+        //Collider[] colliders = Physics.OverlapSphere(transform.position, m_ExplosionRadius, m_EnemyMask);
+
+        //foreach (Collider collider in colliders)
+        //{
+        //    Rigidbody targetRigidBody = collider.GetComponent<Rigidbody>();
+        //    if (!targetRigidBody)
+        //        continue;
+        //    targetRigidBody.AddExplosionForce(m_ExplosionForce, transform.position, m_ExplosionRadius);
+        //    Enemy target = targetRigidBody.GetComponent<Enemy>();
+        //    if (!target)
+        //        continue;
+
+        //    Enemy enemy = collider.GetComponent<Enemy>();
+        //    if (enemy)
+        //    {
+        //        float damageAmount = CalculateDamage(enemy.gameObject.transform.position);
+        //        enemy.TakeDamageFormCurrentBullet(damageAmount, this);
+        //    }
+        //}
+        //m_ExplosionParticles.transform.parent = null;
+        //m_ExplosionParticles.Play();
+
+        //Destroy(m_ExplosionParticles.gameObject, m_ExplosionParticles.main.duration);
+        //Destroy(gameObject);
+
         Collider[] colliders = Physics.OverlapSphere(transform.position, m_ExplosionRadius, m_EnemyMask);
 
-        /*foreach (Collider collider in colliders)
+        foreach (Collider collider in colliders)
         {
             Rigidbody targetRigidBody = collider.GetComponent<Rigidbody>();
             if (!targetRigidBody)
                 continue;
             targetRigidBody.AddExplosionForce(m_ExplosionForce, transform.position, m_ExplosionRadius);
-            TankHealth targetHealth = targetRigidBody.GetComponent<TankHealth>();
-            if (!targetHealth)
+            Enemy target = targetRigidBody.GetComponent<Enemy>();
+            if (!target)
                 continue;
 
-            float damage = CalculateDamage(targetRigidBody.position);
-            targetHealth.TakeDamage(damage);
-        }*/
+            float damageAmount = CalculateDamage(targetRigidBody.position);
+            target.TakeDamageFormCurrentBullet(damageAmount, this);
+        }
         m_ExplosionParticles.transform.parent = null;
         m_ExplosionParticles.Play();
 
@@ -43,7 +66,7 @@ public class ShellExplosion : MonoBehaviour
     }
 
 
-    /*private float CalculateDamage(Vector3 targetPosition)
+    private float CalculateDamage(Vector3 targetPosition)
     {
         // Calculate the amount of damage a target should take based on it's position.
         Vector3 explosionToTarget = targetPosition - transform.position;
@@ -52,18 +75,18 @@ public class ShellExplosion : MonoBehaviour
         float damage = relativeDistance * m_MaxDamage;
         damage = Mathf.Max(0f, damage);
         return damage;
-    }*/
+    }
 
-    public bool IsGreen()
+    public virtual bool IsGreen()
     {
-        return (Color.Equals("green"));
+        return false;
     }
-    public bool IsRed()
+    public virtual bool IsRed()
     {
-        return (Color.Equals("red"));
+        return false;
     }
-    public bool IsBlue()
+    public virtual bool IsBlue()
     {
-        return (Color.Equals("blue"));
+         return false;
     }
 }

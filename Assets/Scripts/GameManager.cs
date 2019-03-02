@@ -1,14 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
-    public static bool IsGameOver = false;
+    public static bool IsGameOver;
 
     public GameObject gameOverUI;
 
+    void Start()
+    {
+        IsGameOver = false;
+    }
 
     // Update is called once per frame
     void Update()
@@ -32,7 +33,6 @@ public class GameManager : MonoBehaviour
         MouseManager.lockMouse = false;                 // unlock the cursor
         IsGameOver = true;
         gameOverUI.SetActive(true);
-        Debug.Log("Active"); // affD
         Time.timeScale = 0f;                            // freeze the game
     }
 }

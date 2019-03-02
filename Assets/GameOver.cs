@@ -38,12 +38,14 @@ public class GameOver : MonoBehaviour
 
     public void Retry()
     {
+        Debug.Log("RETRY"); //affD
         Time.timeScale = 1f;                            // unfreeze
         sceneFader.FadeTo(SceneManager.GetActiveScene().name);
     }
 
     public void Menu()
     {
+        Debug.Log("MENU"); //affD
         Time.timeScale = 1f;                            // unfreeze
         sceneFader.FadeTo(menuSceneName);
     }

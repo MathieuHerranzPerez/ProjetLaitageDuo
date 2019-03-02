@@ -6,6 +6,11 @@ public class MouseManager : MonoBehaviour
 
     private bool isMouseLocked = false;
 
+    void Start()
+    {
+        lockMouse = true;
+    }
+
     void Update()
     {
         if (lockMouse && !isMouseLocked)
