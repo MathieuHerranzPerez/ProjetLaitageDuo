@@ -44,20 +44,20 @@ public class ShooterFire : MonoBehaviour
     private string m_GreenShellSelectionButton;
     private string m_BlueShellSelectionButton;
 
-    // Material
+    // Materials
     public Material BlueMaterial;
     public Material GreenMaterial;
     public Material RedMaterial;
 
-
-
     // UI cursor
     [SerializeField]
     private Image cursorImage;
-    // Color cursor
-    public Color blueColor;
-    public Color greenColor;
-    public Color redColor;
+
+    // Firing Audio
+    public AudioSource FiringAudio;
+    public AudioSource NoAmmoAudio;
+
+
 
     // Start is called before the first frame update
     private void OnEnable()
@@ -110,19 +110,19 @@ public class ShooterFire : MonoBehaviour
         {
             ChangeAmmo(m_RedShell);
             m_AmmoTypeDisplay.material = RedMaterial;
-            cursorImage.color = redColor;
+            cursorImage.color = RedMaterial.color;
         }
         if (Input.GetButtonDown(m_GreenShellSelectionButton))
         {
             ChangeAmmo(m_BlueShell);
             m_AmmoTypeDisplay.material = BlueMaterial;
-            cursorImage.color = blueColor;
+            cursorImage.color = BlueMaterial.color;
         }
         if (Input.GetButtonDown(m_BlueShellSelectionButton))
         {
             ChangeAmmo(m_GreenShell);
             m_AmmoTypeDisplay.material = GreenMaterial;
-            cursorImage.color = greenColor;
+            cursorImage.color = GreenMaterial.color;
 
         }
     }
@@ -165,6 +165,11 @@ public class ShooterFire : MonoBehaviour
             Rigidbody shellInstance = Instantiate(m_currentShell, m_FireTransform.position, m_FireTransform.rotation) as Rigidbody;
             shellInstance.velocity = m_CurrentLaunchForce * m_FireTransform.forward;
             m_CurrentLaunchForce = m_MinLaunchForce;
+            FiringAudio.Play();
+        }
+        else
+        {
+            NoAmmoAudio.Play();
         }
         
     }
