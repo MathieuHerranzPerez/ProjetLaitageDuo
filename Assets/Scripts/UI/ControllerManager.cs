@@ -22,10 +22,13 @@ public class ControllerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // tp control
         checkControllerButton("controllerYbtn", northBtn);
         checkControllerButton("controllerAbtn", southBtn);
         checkControllerButton("controllerBbtn", eastBtn);
         checkControllerButton("controllerXbtn", westBtn);
+
+        // select a ressource button
     }
 
     void checkControllerButton(string buttonController,Button buttonUI)

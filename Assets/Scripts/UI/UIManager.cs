@@ -19,6 +19,8 @@ public class UIManager : MonoBehaviour
         
     }
 
+
+
     public void TPtoSouth()
     {
         tpManager.TPtoSouth();
