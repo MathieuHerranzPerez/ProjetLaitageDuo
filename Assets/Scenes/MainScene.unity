@@ -985,6 +985,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4102566478631986923}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1653024693 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4102566478070399314, guid: 0875bbb0b214031468043dc2ba2fc10b,
+    type: 3}
+  m_PrefabInstance: {fileID: 4102566478631986923}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653024691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa82bcda995969498154d99236d923d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1992686362
 GameObject:
   m_ObjectHideFlags: 0
@@ -1415,5 +1427,25 @@ PrefabInstance:
       propertyPath: sceneFader
       value: 
       objectReference: {fileID: 1523295527}
+    - target: {fileID: 4102566478602783762, guid: 0875bbb0b214031468043dc2ba2fc10b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1653024693}
+    - target: {fileID: 4102566478602783762, guid: 0875bbb0b214031468043dc2ba2fc10b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Retry
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102566478458836820, guid: 0875bbb0b214031468043dc2ba2fc10b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1653024693}
+    - target: {fileID: 4102566478458836820, guid: 0875bbb0b214031468043dc2ba2fc10b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Menu
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0875bbb0b214031468043dc2ba2fc10b, type: 3}

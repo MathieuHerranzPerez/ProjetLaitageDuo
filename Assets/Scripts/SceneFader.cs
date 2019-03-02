@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneFader : MonoBehaviour
 {
-
     public Image img;
+    public GameObject sceneFaderGO;
     public AnimationCurve curve;
 
     public GameObject loadScreen;
@@ -30,6 +30,7 @@ public class SceneFader : MonoBehaviour
 
     public void FadeTo(string scene)
     {
+        sceneFaderGO.SetActive(true);
         FadeOut(scene);
     }
 

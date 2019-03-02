@@ -1,18 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [System.Serializable]
 public class EnemyStats
 {
-    public float maxHP;
-    public float currentHP;
+    public float maxHP = 100;
+    public float currentHP = 100;
 
-    public float damage;
+    public int damage = 1;
     [Range(1f, 10f)]
-    public float moveSpeed;
+    public float moveSpeed = 2;
 
-    public int worth;   // the amount of gold earned by killing
+    public int worth = 10;   // the amount of gold earned by killing
 
-    public bool isBoss;
+    public bool isBoss = false;
 }

@@ -162,6 +162,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startMoney: 20
   startLives: 3
+  startNbGreenAmo: 5
+  startNbRedAmo: 5
+  startNbBlueAmo: 5
 --- !u!114 &3404782588939035236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   img: {fileID: 8640271916875097441}
+  sceneFaderGO: {fileID: 8405677167317745678}
   curve:
     serializedVersion: 2
     m_Curve:
@@ -449,7 +453,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4422160639746099207
 RectTransform:
   m_ObjectHideFlags: 0

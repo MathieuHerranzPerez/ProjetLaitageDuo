@@ -5,6 +5,16 @@ using UnityEngine;
 [RequireComponent(typeof(Enemy))]
 public class EnemyMovement : MonoBehaviour
 {
+    [Header("Animations")]
+    public GameObject deathEffect;
+    public GameObject hitEffect;
+    [Header("Sound")]
+    public AudioClip soundWhenDie;
+    [Range(0.05f, 1f)]
+    public float volume = 0.5f;
+    public GameObject audioPlayer;
+
+    // intern
     private Transform target;
     private float delta = 0.3f; // if the enemy is at pos + or - this
     private Enemy enemy;
@@ -41,8 +51,20 @@ public class EnemyMovement : MonoBehaviour
         {
             //
         }
-        // PlayerStats.Lives -= enemy.stats.damage;
-        // ANIMATION explosion
+        PlayerStats.Lives -= enemy.stats.damage;
+
+        // effect on death
+        GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
+        Destroy(effect, 3f);
+
+        if (soundWhenDie)
+        {
+            // invoke another gameobject to play the sound
+            GameObject soundGO = (GameObject)Instantiate(audioPlayer, transform.position, transform.rotation);
+            AudioPlayer _audioPlayer = soundGO.GetComponent<AudioPlayer>();
+            _audioPlayer.Play(soundWhenDie, volume);
+            Destroy(soundGO, 1f);
+        }
 
         Destroy(gameObject);
     }
