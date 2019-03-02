@@ -33,6 +33,7 @@ public class ShooterFire : MonoBehaviour
     public Text textBlueAmmo;
 
     // Current shell type to be fired
+    [HideInInspector]
     public Rigidbody m_currentShell;
 
     
@@ -63,6 +64,7 @@ public class ShooterFire : MonoBehaviour
         m_ChargeSpeed = (m_MaxLaunchForce - m_MinLaunchForce) / m_MaxChargeTime;
         m_currentShell = m_BlueShell;
         m_AmmoTypeDisplay.material = BlueMaterial;
+
         textRedAmmo.text = PlayerStats.NbRedAmmo.ToString();
         textGreenAmmo.text = PlayerStats.NbRedAmmo.ToString();
         textBlueAmmo.text = PlayerStats.NbBlueAmmo.ToString();

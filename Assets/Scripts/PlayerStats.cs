@@ -17,8 +17,7 @@ public class PlayerStats : MonoBehaviour
     public int startNbBlueAmo = 5;
 
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         Money = startMoney;
         Lives = startLives;
@@ -29,6 +28,7 @@ public class PlayerStats : MonoBehaviour
         NbEnemyKilled = 0;
         TimeSurvived = 0f;
     }
+
 
     void Update()
     {
