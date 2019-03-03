@@ -24,8 +24,7 @@ public class PlayerStats : MonoBehaviour
     public int startNbRound= 0;
     public int startNbSquare= 0;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         Money = startMoney;
         Lives = startLives;

@@ -36,12 +36,12 @@ public class TPManager : MonoBehaviour
 
     public void TPtoEast()
     {
-        player.transform.SetPositionAndRotation(coordEast, Quaternion.Euler(0, 90, 0));
+        player.transform.SetPositionAndRotation(coordEast, Quaternion.Euler(0, 270, 0));
     }
 
     public void TPtoWest()
     {
-        player.transform.SetPositionAndRotation(coordWest, Quaternion.Euler(0, 270, 0));
+        player.transform.SetPositionAndRotation(coordWest, Quaternion.Euler(0, 90, 0));
     }
 
 }
