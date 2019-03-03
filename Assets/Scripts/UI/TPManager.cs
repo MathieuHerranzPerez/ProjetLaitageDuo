@@ -11,6 +11,8 @@ public class TPManager : MonoBehaviour
     public Vector3 coordEast;
     public Vector3 coordWest;
 
+    public AudioSource tpAudioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,21 +29,25 @@ public class TPManager : MonoBehaviour
     public void TPtoSouth()
     {
         player.transform.SetPositionAndRotation(coordSouth, Quaternion.Euler(0,0,0));
+        tpAudioSource.Play();
     }
 
     public void TPtoNorth()
     {
         player.transform.SetPositionAndRotation(coordNorth, Quaternion.Euler(0, 180, 0));
+        tpAudioSource.Play();
     }
 
     public void TPtoEast()
     {
         player.transform.SetPositionAndRotation(coordEast, Quaternion.Euler(0, 270, 0));
+        tpAudioSource.Play();
     }
 
     public void TPtoWest()
     {
         player.transform.SetPositionAndRotation(coordWest, Quaternion.Euler(0, 90, 0));
+        tpAudioSource.Play();
     }
 
 }

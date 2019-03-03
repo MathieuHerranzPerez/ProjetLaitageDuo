@@ -4,7 +4,7 @@ public class EnemySpawner : MonoBehaviour
 {
     private Transform enemyTarget;
 
-    public void SpawnEnemy(GameObject enemyGO)
+    public void SpawnEnemy(GameObject enemyGO, float speed)
     {
         // get the direction
         Vector3 relativePos = enemyTarget.position - transform.position;
@@ -12,6 +12,7 @@ public class EnemySpawner : MonoBehaviour
 
         GameObject enemyCloneGO = (GameObject) Instantiate(enemyGO, transform.position, rotation);
         enemyCloneGO.GetComponent<EnemyMovement>().SetTarget(enemyTarget);
+        enemyCloneGO.GetComponent<Enemy>().stats.moveSpeed = speed;
     }
 
     public void SetTarget(Transform target)

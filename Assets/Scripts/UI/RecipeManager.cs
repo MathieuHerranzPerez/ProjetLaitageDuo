@@ -6,6 +6,10 @@ using UnityEngine.UI;
 public class RecipeManager : MonoBehaviour
 {
     public static RecipeManager Instance;
+    // Audio Source when completing a recipe and adding ammo of player
+    public static AudioSource AmmoAudio;
+    public AudioSource ammoAudio = null;
+
     public static int[] RecipeRed = new int[4];
     public static int[] RecipeGreen = new int[4];
     public static int[] RecipeBlue = new int[4];
@@ -20,7 +24,7 @@ public class RecipeManager : MonoBehaviour
     public int[] startRecipeRed = new int[4];
     public int[] startRecipeGreen = new int[4];
     public int[] startRecipeBlue = new int[4];
-    public int startBonusAmo;
+    public int startBonusAmmo;
 
     public Button[] startPatternButton1 = new Button[4];
     public Button[] startPatternButton2 = new Button[3];
@@ -35,12 +39,14 @@ public class RecipeManager : MonoBehaviour
         RecipeRed = startRecipeRed;
         RecipeGreen = startRecipeGreen;
         RecipeBlue = startRecipeBlue;
-        bonusAmo = startBonusAmo;
         notifier = startNotifier;
+        bonusAmo = startBonusAmmo;
 
         patternButton1 = startPatternButton1;
         patternButton2 = startPatternButton2;
         patternButton3 = startPatternButton3;
+
+        AmmoAudio = ammoAudio;
     }
 
     // Update is called once per frame
@@ -79,18 +85,21 @@ public class RecipeManager : MonoBehaviour
         if(CheckRecipe(RecipeRed))
         {
             PlayerStats.NbRedAmmo += bonusAmo;
+            AmmoAudio.Play();
             Debug.Log("red munitions + 5 : " + PlayerStats.NbRedAmmo);
             Notify("red");
         }
         if (CheckRecipe(RecipeGreen))
         {
             PlayerStats.NbGreenAmmo += bonusAmo;
+            AmmoAudio.Play();
             Debug.Log("green munitions + 5 : " + PlayerStats.NbGreenAmmo );
             Notify("green");
         }
         if (CheckRecipe(RecipeBlue))
         {
             PlayerStats.NbBlueAmmo += bonusAmo;
+            AmmoAudio.Play();
             Debug.Log("blue munitions + 5 : " + PlayerStats.NbBlueAmmo);
             Notify("blue");
         }
