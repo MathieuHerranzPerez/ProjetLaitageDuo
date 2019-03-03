@@ -5,11 +5,17 @@ public class GlobalEnemySpawner : MonoBehaviour
 {
     // Spawning stats
     public bool isSpawning = true;
-
+    [Header("Game rules at start")]
     // Different Rates
-    public float spawningRate = 4f;
+    public float spawnRate = 4f;
     public float quadrantUnlockRate = 15f;
     public float enemySpeed =2f;
+
+    // Different increase parameters
+    [Header("Game variables increase deltas")]
+    public float spawnRateDelta = 0.2f;
+    public float quadrantUnlockRateDelta = 0f;
+    public float enemySpeedDelta = 1f;
 
     // Spawning Zones 
     private int currentMaxQuadrantUnlocked = 0;
@@ -37,7 +43,7 @@ public class GlobalEnemySpawner : MonoBehaviour
             quadrantUnlockTime += currentDeltaTime;
 
             // Spawning ennemies
-            if(spawnTime >= spawningRate)
+            if(spawnTime >= spawnRate)
             {
                 spawnTime = 0f;
 
@@ -56,10 +62,12 @@ public class GlobalEnemySpawner : MonoBehaviour
                 currentMaxQuadrantUnlocked = (currentMaxQuadrantUnlocked + 1)% listPlaceEnemySpawner.Count;
                  if (currentMaxQuadrantUnlocked % listPlaceEnemySpawner.Count == 1)
                  {
-                     currentMaxQuadrantUnlocked %= listPlaceEnemySpawner.Count;
+                    currentMaxQuadrantUnlocked %= listPlaceEnemySpawner.Count;
 
-                     spawningRate -= 0.5f;
-                 }
+                    spawnRate -= spawnRateDelta;
+                    enemySpeed += enemySpeedDelta;
+                    quadrantUnlockRate -= quadrantUnlockRateDelta;
+                }
                 Debug.Log("current quadrant unlocked :" + currentMaxQuadrantUnlocked); // affD
             }
         }

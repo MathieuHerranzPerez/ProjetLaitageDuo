@@ -1224,7 +1224,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSpawning: 1
-  spawningRate: 1.5
+  spawningRate: 2
+  quadrantUnlockRate: 15
+  enemySpeed: 2
   listPlaceEnemySpawner:
   - {fileID: 2197477732206731533}
   - {fileID: 3146765560097683131}
