@@ -170,6 +170,7 @@ MonoBehaviour:
   m_ExplosionForce: 500
   m_MaxLifeTime: 4
   m_ExplosionRadius: 15
+  m_explosionAudio: {fileID: 5089983989005902204}
 --- !u!1001 &2506605194846768094
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -252,6 +253,12 @@ Transform:
 --- !u!198 &2506605194860803784 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 19807510, guid: cd7fec3c8afcc3648b16675a2451bc25,
+    type: 3}
+  m_PrefabInstance: {fileID: 2506605194846768094}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &5089983989005902204 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7235597249192061602, guid: cd7fec3c8afcc3648b16675a2451bc25,
     type: 3}
   m_PrefabInstance: {fileID: 2506605194846768094}
   m_PrefabAsset: {fileID: 0}
