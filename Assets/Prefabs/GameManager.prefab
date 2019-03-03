@@ -164,8 +164,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee3fe271864dcc248ad7b5c315448ea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 100
-  startMaxMoney: 30
+  startMoney: 30
+  startMaxMoney: 100
   startLives: 3
   startNbGreenAmmo: 5
   startNbRedAmmo: 5
@@ -238,8 +238,7 @@ AudioSource:
   m_GameObject: {fileID: 3404782588939035232}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 243438976944447652, guid: dba696630eb3e42478baa8ee4d5fe470,
-    type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6e68f6c06426f85439487040c7a6370a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -335,8 +334,7 @@ AudioSource:
   m_GameObject: {fileID: 3404782588939035232}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 243707199831334910, guid: dba696630eb3e42478baa8ee4d5fe470,
-    type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f9fce7630d45ce348a839b543d7c9e4f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.918

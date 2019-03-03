@@ -253,6 +253,17 @@ PrefabInstance:
       propertyPath: gameOverUI
       value: 
       objectReference: {fileID: 663947172}
+    - target: {fileID: 6171843281201270400, guid: 89e28515f7c6eb143991c6406c99c3db,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243438976944447652, guid: dba696630eb3e42478baa8ee4d5fe470,
+        type: 2}
+    - target: {fileID: 1109841692, guid: 89e28515f7c6eb143991c6406c99c3db, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243707199831334910, guid: dba696630eb3e42478baa8ee4d5fe470,
+        type: 2}
     - target: {fileID: 1109841685, guid: 89e28515f7c6eb143991c6406c99c3db, type: 3}
       propertyPath: startPatternButton1.Array.data[0]
       value: 

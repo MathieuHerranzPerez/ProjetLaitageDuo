@@ -247,87 +247,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &599731935
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 599731936}
-  - component: {fileID: 599731938}
-  - component: {fileID: 599731937}
-  m_Layer: 0
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &599731936
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 599731935}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1143775889}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -255, y: -400}
-  m_SizeDelta: {x: 853.9, y: 166}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &599731937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 599731935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.7264151, g: 0.7264151, b: 0.7264151, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 60
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 60
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: '<b>Pressure</b>
-
-    Puzzle - Multiplayer - Arcade'
---- !u!222 &599731938
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 599731935}
-  m_CullTransparentMesh: 0
 --- !u!1001 &715635804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -546,33 +465,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3450103036367939156, guid: 96b0c5cf1e2a1bc4289d8ccf44e04390,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -624
-      objectReference: {fileID: 0}
-    - target: {fileID: 6901917171531293833, guid: 96b0c5cf1e2a1bc4289d8ccf44e04390,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -623.9998
-      objectReference: {fileID: 0}
-    - target: {fileID: 8642404164363601896, guid: 96b0c5cf1e2a1bc4289d8ccf44e04390,
-        type: 3}
-      propertyPath: m_FontData.m_FontStyle
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1340683007, guid: 96b0c5cf1e2a1bc4289d8ccf44e04390, type: 3}
       propertyPath: sceneFader
       value: 
       objectReference: {fileID: 1160183509}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96b0c5cf1e2a1bc4289d8ccf44e04390, type: 3}
---- !u!224 &1143775889 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5998876520125374787, guid: 96b0c5cf1e2a1bc4289d8ccf44e04390,
-    type: 3}
-  m_PrefabInstance: {fileID: 1143775888}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1160183509 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7908184004543346239, guid: 0aeb59e19afa61c419b8fce6ff41a117,

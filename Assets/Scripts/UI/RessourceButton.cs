@@ -39,6 +39,7 @@ public class RessourceButton : MonoBehaviour
             else if (value == 3)
                 PlayerStats.NbSquare += 1;
 
+         
             PlayerStats.Money -= 10;
 
             // check if a recipe is available
