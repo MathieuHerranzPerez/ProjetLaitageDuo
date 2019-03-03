@@ -253,17 +253,23 @@ PrefabInstance:
       propertyPath: gameOverUI
       value: 
       objectReference: {fileID: 663947172}
-    - target: {fileID: 6171843281201270400, guid: 89e28515f7c6eb143991c6406c99c3db,
-        type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 243438976944447652, guid: dba696630eb3e42478baa8ee4d5fe470,
-        type: 2}
     - target: {fileID: 1109841692, guid: 89e28515f7c6eb143991c6406c99c3db, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
-      objectReference: {fileID: 243707199831334910, guid: dba696630eb3e42478baa8ee4d5fe470,
+      objectReference: {fileID: 243707199831334910, guid: daa981c43cac0f74bae966e5ce107442,
         type: 2}
+    - target: {fileID: 1109841692, guid: 89e28515f7c6eb143991c6406c99c3db, type: 3}
+      propertyPath: m_Volume
+      value: 0.114
+      objectReference: {fileID: 0}
+    - target: {fileID: 1109841692, guid: 89e28515f7c6eb143991c6406c99c3db, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b1f8f6ea0e0aa4c489b253130aa3b48b, type: 3}
+    - target: {fileID: 1109841692, guid: 89e28515f7c6eb143991c6406c99c3db, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1109841685, guid: 89e28515f7c6eb143991c6406c99c3db, type: 3}
       propertyPath: startPatternButton1.Array.data[0]
       value: 

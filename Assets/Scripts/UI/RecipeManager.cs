@@ -7,8 +7,8 @@ public class RecipeManager : MonoBehaviour
 {
     public static RecipeManager Instance;
     // Audio Source when completing a recipe and adding ammo of player
-    public static AudioSource AmmoAudio;
-    public AudioSource ammoAudio = null;
+    //public static AudioSource AmmoAudio;
+   // public AudioSource ammoAudio = null;
 
     public static int[] RecipeRed = new int[4];
     public static int[] RecipeGreen = new int[4];
@@ -59,7 +59,7 @@ public class RecipeManager : MonoBehaviour
         GreenColor = greenColor;
         BlueColor = blueColor;
 
-        AmmoAudio = ammoAudio;
+       // AmmoAudio = ammoAudio;
     }
 
     // Update is called once per frame
@@ -98,19 +98,19 @@ public class RecipeManager : MonoBehaviour
         if(CheckRecipe(RecipeRed))
         {
             PlayerStats.NbRedAmmo += bonusAmo;
-            AmmoAudio.Play();
+            //AmmoAudio.Play();
             Notify("red");
         }
         if (CheckRecipe(RecipeGreen))
         {
             PlayerStats.NbGreenAmmo += bonusAmo;
-            AmmoAudio.Play();
+            //AmmoAudio.Play();
             Notify("green");
         }
         if (CheckRecipe(RecipeBlue))
         {
             PlayerStats.NbBlueAmmo += bonusAmo;
-            AmmoAudio.Play();
+            //AmmoAudio.Play();
             Notify("blue");
         }
 
