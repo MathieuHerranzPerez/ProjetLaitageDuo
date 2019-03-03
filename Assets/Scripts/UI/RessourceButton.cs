@@ -1,28 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class RessourceButton : MonoBehaviour
 {
+    EventSystem eventSystem;
     public int value; // 0 : round , 1 : star , 2 : triangle, 3 : square
     Button button;
 
+    // intern
+    private bool isHightlighted = false;
+    
     // Start is called before the first frame update
-    void Awake()
-    {
-        
-    }
-
     void Start()
     {
         button = GetComponent<Button>();
+        eventSystem = EventSystem.current;
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+
     }
 
     public void IsClicked()
@@ -47,6 +48,7 @@ public class RessourceButton : MonoBehaviour
             // disable and check if the combinaison of disabled buttons is a pattern
             button.interactable = false;
             RecipeManager.checkButtonCombinaison();
+            eventSystem.SetSelectedGameObject(button.gameObject);
         }
        
     }
