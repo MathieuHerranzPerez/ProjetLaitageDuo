@@ -165,11 +165,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startMoney: 100
-  startMaxMoney: 100
+  startMaxMoney: 30
   startLives: 3
-  startNbGreenAmmo: 10
-  startNbRedAmmo: 10
-  startNbBlueAmmo: 10
+  startNbGreenAmmo: 5
+  startNbRedAmmo: 5
+  startNbBlueAmmo: 5
   startNbStar: 0
   startNbTriangle: 0
   startNbRound: 0

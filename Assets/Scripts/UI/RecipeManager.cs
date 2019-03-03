@@ -86,21 +86,18 @@ public class RecipeManager : MonoBehaviour
         {
             PlayerStats.NbRedAmmo += bonusAmo;
             AmmoAudio.Play();
-            Debug.Log("red munitions + 5 : " + PlayerStats.NbRedAmmo);
             Notify("red");
         }
         if (CheckRecipe(RecipeGreen))
         {
             PlayerStats.NbGreenAmmo += bonusAmo;
             AmmoAudio.Play();
-            Debug.Log("green munitions + 5 : " + PlayerStats.NbGreenAmmo );
             Notify("green");
         }
         if (CheckRecipe(RecipeBlue))
         {
             PlayerStats.NbBlueAmmo += bonusAmo;
             AmmoAudio.Play();
-            Debug.Log("blue munitions + 5 : " + PlayerStats.NbBlueAmmo);
             Notify("blue");
         }
 
@@ -136,7 +133,7 @@ public class RecipeManager : MonoBehaviour
             t += Time.deltaTime;
             yield return null;
         }
-        Debug.Log("regarde la");
+
         notifier.text = "";
 
     }
@@ -151,7 +148,6 @@ public class RecipeManager : MonoBehaviour
             PlayerStats.NbStar -= recipe[1];
             PlayerStats.NbTriangle -= recipe[2];
             PlayerStats.NbSquare -= recipe[3];
-            Debug.Log("Find ! " + playerRessources[0] + " / " + playerRessources[1] + " / " + playerRessources[2] + " / " + playerRessources[3]);
             return true;
         }
 

@@ -20,19 +20,25 @@ public class GameOver : MonoBehaviour
     void OnEnable()
     {
         float timeSurvived = PlayerStats.TimeSurvived;
-        timeText.text = string.Format("{00:00:00.0}", timeSurvived);
+        int nbMin = (int) timeSurvived / 60;
+        float restTimeSurvived = timeSurvived % 60;
+
+        timeText.text = string.Format("{0:00}:{1:00}", nbMin, restTimeSurvived);
 
         
         PlayerPrefs.GetFloat("bestTime", bestTime);
 
-        if(timeSurvived > bestTime)
+        if (timeSurvived > bestTime)
         {
             PlayerPrefs.SetFloat("bestTime", timeSurvived);
-            bestTimetext.text = string.Format("{00:00:00.0}", timeSurvived);
+
+            bestTimetext.text = string.Format("{0:00}:{1:00}", nbMin, restTimeSurvived);
         }
         else
         {
-            bestTimetext.text = string.Format("{00:00:00.0}", bestTime);
+            int nbBestMin = (int) bestTime / 60;
+            int restBestTimeSurvived = (int) bestTime % 60;
+            bestTimetext.text = string.Format("{0:00}:{1:00}", nbMin, restBestTimeSurvived);
         }
     }
 
