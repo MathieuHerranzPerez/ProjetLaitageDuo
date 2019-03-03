@@ -41,7 +41,9 @@ public abstract class Enemy : MonoBehaviour
     protected void Die()
     {
         // add money to the user
-        PlayerStats.Money += stats.worth;
+        if(PlayerStats.Money < PlayerStats.MaxMoney ) {
+            PlayerStats.Money += stats.worth;
+        }
         // increment nb enemies killed
         ++ PlayerStats.NbEnemyKilled;
 

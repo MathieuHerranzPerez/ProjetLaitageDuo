@@ -16,7 +16,7 @@ public class TPManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        TPtoNorth();
     }
 
     // Update is called once per frame
