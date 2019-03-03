@@ -25,8 +25,10 @@ public class GameOver : MonoBehaviour
 
         timeText.text = string.Format("{0:00}:{1:00}", nbMin, restTimeSurvived);
 
-        
-        PlayerPrefs.GetFloat("bestTime", bestTime);
+        if (PlayerPrefs.HasKey("bestTime"))
+            bestTime = PlayerPrefs.GetFloat("bestTime");
+        else
+            bestTime = 0f;
 
         if (timeSurvived > bestTime)
         {
@@ -44,14 +46,12 @@ public class GameOver : MonoBehaviour
 
     public void Retry()
     {
-        Debug.Log("RETRY"); //affD
         Time.timeScale = 1f;                            // unfreeze
         sceneFader.FadeTo(SceneManager.GetActiveScene().name);
     }
 
     public void Menu()
     {
-        Debug.Log("MENU"); //affD
         Time.timeScale = 1f;                            // unfreeze
         sceneFader.FadeTo(menuSceneName);
     }
