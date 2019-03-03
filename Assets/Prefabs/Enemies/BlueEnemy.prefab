@@ -503,10 +503,6 @@ MonoBehaviour:
   deathEffect: {fileID: 605651287483650282, guid: 31c787b6e4521144bbdb7b9dbab146f1,
     type: 3}
   hitEffect: {fileID: 0}
-  soundExplosion: {fileID: 8300000, guid: 55fed8b4672f3254db1d2e5dcf529e12, type: 3}
-  volume: 0.5
-  audioPlayer: {fileID: 1970248497662627157, guid: e62277cacce68314791a07fdd3cd8dd9,
-    type: 3}
 --- !u!54 &5428622783612195253
 Rigidbody:
   m_ObjectHideFlags: 0
