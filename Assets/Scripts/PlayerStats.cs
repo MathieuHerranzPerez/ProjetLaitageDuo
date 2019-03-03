@@ -13,8 +13,10 @@ public class PlayerStats : MonoBehaviour
     public static int NbTriangle;
     public static int NbRound;
     public static int NbSquare;
+    public static int MaxMoney;
 
     public int startMoney = 20;
+    public int startMaxMoney = 100;
     public int startLives = 3;
     public int startNbGreenAmmo = 5;
     public int startNbRedAmmo = 5;
@@ -27,6 +29,7 @@ public class PlayerStats : MonoBehaviour
     void Awake()
     {
         Money = startMoney;
+        MaxMoney = startMaxMoney;
         Lives = startLives;
         NbGreenAmmo = startNbGreenAmmo;
         NbRedAmmo = startNbRedAmmo;
