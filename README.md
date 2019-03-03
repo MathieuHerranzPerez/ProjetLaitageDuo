@@ -33,5 +33,5 @@ NoAmmo.wav https://freesound.org/people/KlawyKogut/sounds/154934/ CC0
 Recharging ammo https://freesound.org/people/pumodi/sounds/150220/ CC3.0
 Missile Explosion https://freesound.org/people/smcameron/sounds/51467/ CC3.0
 
-Background music http://freemusicarchive.org/music/Unconceptual/Unconceptual_LP/Unconceptual_-_Unconceptual_LP_-_10_Haste CC4.0
+Background music https://opengameart.org/content/hero-immortal *Credit Author*
 
