@@ -21,6 +21,11 @@ public class RecipeManager : MonoBehaviour
     public static Button[] patternButton3 = new Button[3];
     public static Text notifier;
 
+    public static Color RedColor;
+    public static Color GreenColor;
+    public static Color BlueColor;
+
+
     public int[] startRecipeRed = new int[4];
     public int[] startRecipeGreen = new int[4];
     public int[] startRecipeBlue = new int[4];
@@ -31,6 +36,10 @@ public class RecipeManager : MonoBehaviour
     public Button[] startPatternButton3 = new Button[3];
 
     public Text startNotifier;
+
+    public Color redColor;
+    public Color greenColor;
+    public Color blueColor;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +54,10 @@ public class RecipeManager : MonoBehaviour
         patternButton1 = startPatternButton1;
         patternButton2 = startPatternButton2;
         patternButton3 = startPatternButton3;
+
+        RedColor = redColor;
+        GreenColor = greenColor;
+        BlueColor = blueColor;
 
         AmmoAudio = ammoAudio;
     }
@@ -108,13 +121,13 @@ public class RecipeManager : MonoBehaviour
 
     private static void Notify(string color)
     {
-        string textToDisplay = "x" + bonusAmo + " " + color + " munitions created !";
+        string textToDisplay = "x" + bonusAmo + " " + color + " ammo created !";
         if (color.CompareTo("red") == 0)
-            notifier.color = Color.red;
+            notifier.color = RedColor;
         else if (color.CompareTo("blue") == 0)
-            notifier.color = Color.blue;
+            notifier.color = BlueColor;
         else if (color.CompareTo("green") == 0)
-            notifier.color = Color.green;
+            notifier.color = GreenColor;
 
         notifier.text = textToDisplay;
 
@@ -136,7 +149,6 @@ public class RecipeManager : MonoBehaviour
             t += Time.deltaTime;
             yield return null;
         }
-        Debug.Log("regarde la");
         notifier.text = "";
 
     }
