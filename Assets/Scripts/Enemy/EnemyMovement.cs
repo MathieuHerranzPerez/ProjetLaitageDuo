@@ -29,7 +29,11 @@ public class EnemyMovement : MonoBehaviour
         if (target)
         {
             Vector3 direction = target.position - transform.position;  // get the direction of the target
-            transform.Translate(direction.normalized * enemy.stats.moveSpeed * Time.deltaTime, Space.World);    // move
+            Quaternion lookRotation = Quaternion.LookRotation(direction);
+            Vector3 rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * 10).eulerAngles;  // rotate
+
+            transform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+            transform.Translate(direction.normalized * enemy.stats.moveSpeed * Time.deltaTime, Space.World);        // move
 
             // the enemy has reached the point
             if (Vector3.Distance(transform.position, target.position) <= delta)
