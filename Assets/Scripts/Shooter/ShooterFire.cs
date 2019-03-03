@@ -57,6 +57,10 @@ public class ShooterFire : MonoBehaviour
     public AudioSource FiringAudio;
     public AudioSource NoAmmoAudio;
 
+    // Animation
+    [SerializeField]
+    private Animator weaponAnimator;
+
 
 
     // Start is called before the first frame update
@@ -161,13 +165,14 @@ public class ShooterFire : MonoBehaviour
         }
 
         // If we have enough ammo, actually fire a shell
-        if(canFire == true)
+        if(canFire)
         {
             m_Fired = true;
             Rigidbody shellInstance = Instantiate(m_currentShell, m_FireTransform.position, m_FireTransform.rotation) as Rigidbody;
             shellInstance.velocity = m_CurrentLaunchForce * m_FireTransform.forward;
             m_CurrentLaunchForce = m_MinLaunchForce;
             FiringAudio.Play();
+            weaponAnimator.SetTrigger("shoot");
         }
         else
         {
