@@ -105,7 +105,7 @@ public class ShooterFire : MonoBehaviour
             Fire();
         }
 
-        // Chnage ammo type on button down
+        // Change ammo type on button down
         if (Input.GetButtonDown(m_RedShellSelectionButton))
         {
             ChangeAmmo(m_RedShell);
@@ -125,6 +125,11 @@ public class ShooterFire : MonoBehaviour
             cursorImage.color = GreenMaterial.color;
 
         }
+
+        // update ammo
+        textBlueAmmo.text = PlayerStats.NbBlueAmmo.ToString();
+        textRedAmmo.text = PlayerStats.NbRedAmmo.ToString();
+        textGreenAmmo.text = PlayerStats.NbGreenAmmo.ToString();
     }
 
     private void ChangeAmmo(Rigidbody shell)
@@ -142,19 +147,16 @@ public class ShooterFire : MonoBehaviour
         if (m_currentShell == m_BlueShell && PlayerStats.NbBlueAmmo > 0)
         {
             PlayerStats.NbBlueAmmo--;
-            textBlueAmmo.text = PlayerStats.NbBlueAmmo.ToString();
             canFire = true;
         }
         else if(m_currentShell == m_RedShell && PlayerStats.NbRedAmmo > 0)
         {
             PlayerStats.NbRedAmmo--;
-            textRedAmmo.text = PlayerStats.NbRedAmmo.ToString();
-            canFire = true;
+           canFire = true;
         }
         else if(m_currentShell == m_GreenShell && PlayerStats.NbGreenAmmo > 0)
         {
             PlayerStats.NbGreenAmmo--;
-            textGreenAmmo.text = PlayerStats.NbGreenAmmo.ToString();
             canFire = true;
         }
 
