@@ -170,7 +170,7 @@ MonoBehaviour:
   m_explosionAudio: {fileID: 5753550741852507359}
   m_MaxDamage: 200
   m_ExplosionForce: 500
-  m_MaxLifeTime: 4
+  m_MaxLifeTime: 6
   m_ExplosionRadius: 15
 --- !u!1 &3891796053975873942
 GameObject:
@@ -4877,6 +4877,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4924383941350802}
     m_Modifications:
+    - target: {fileID: 195792, guid: 89e78efe92dfe5a42837b392cdb0bf9e, type: 3}
+      propertyPath: m_Name
+      value: BlueShellExplosion
+      objectReference: {fileID: 0}
     - target: {fileID: 486730, guid: 89e78efe92dfe5a42837b392cdb0bf9e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4932,10 +4936,6 @@ PrefabInstance:
     - target: {fileID: 486730, guid: 89e78efe92dfe5a42837b392cdb0bf9e, type: 3}
       propertyPath: m_LocalScale.z
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 195792, guid: 89e78efe92dfe5a42837b392cdb0bf9e, type: 3}
-      propertyPath: m_Name
-      value: BlueShellExplosion
       objectReference: {fileID: 0}
     - target: {fileID: 19807510, guid: 89e78efe92dfe5a42837b392cdb0bf9e, type: 3}
       propertyPath: SubModule.subEmitters.Array.data[0].emitter

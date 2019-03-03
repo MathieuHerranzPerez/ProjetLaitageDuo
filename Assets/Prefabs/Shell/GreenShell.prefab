@@ -170,7 +170,7 @@ MonoBehaviour:
   m_explosionAudio: {fileID: 6375477161432766740}
   m_MaxDamage: 200
   m_ExplosionForce: 500
-  m_MaxLifeTime: 4
+  m_MaxLifeTime: 6
   m_ExplosionRadius: 15
 --- !u!1 &4117795932010619099
 GameObject:
@@ -4877,14 +4877,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4924383941350802}
     m_Modifications:
-    - target: {fileID: 19807510, guid: 781c48fbd6cb6b34985d1207638fc142, type: 3}
-      propertyPath: SubModule.subEmitters.Array.data[0].emitter
-      value: 
-      objectReference: {fileID: 1092757033244890924}
     - target: {fileID: 195792, guid: 781c48fbd6cb6b34985d1207638fc142, type: 3}
       propertyPath: m_Name
       value: GreenShellExplosion
       objectReference: {fileID: 0}
+    - target: {fileID: 19807510, guid: 781c48fbd6cb6b34985d1207638fc142, type: 3}
+      propertyPath: SubModule.subEmitters.Array.data[0].emitter
+      value: 
+      objectReference: {fileID: 1092757033244890924}
     - target: {fileID: 486730, guid: 781c48fbd6cb6b34985d1207638fc142, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
