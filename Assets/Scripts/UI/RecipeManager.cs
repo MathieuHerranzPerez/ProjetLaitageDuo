@@ -141,7 +141,7 @@ public class RecipeManager : MonoBehaviour
     public IEnumerator Timer()
     {
         float t = 0f;
-        while(t < 1f)
+        while(t < 2f)
         {
             t += Time.deltaTime;
             yield return null;
