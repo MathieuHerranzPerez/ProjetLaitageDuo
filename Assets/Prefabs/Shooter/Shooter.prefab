@@ -986,7 +986,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &408042316141088235
 Transform:
   m_ObjectHideFlags: 0
@@ -1316,7 +1316,7 @@ GameObject:
   - component: {fileID: 584775513895407437}
   - component: {fileID: 8142035567008877912}
   - component: {fileID: 4534331172651394586}
-  - component: {fileID: 447405168}
+  - component: {fileID: 6827975257497087000}
   m_Layer: 0
   m_Name: Shooter
   m_TagString: Untagged
@@ -1354,7 +1354,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &584775513895407437
 MonoBehaviour:
@@ -1416,10 +1416,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
-  LookSensitivity: 3
+  LookSensitivity: 1
   verticalMovementAllowed: 1
---- !u!136 &447405168
-CapsuleCollider:
+--- !u!65 &6827975257497087000
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1428,7 +1428,6 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 3
-  m_Direction: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 3, z: 1}
   m_Center: {x: 0, y: 0, z: 0}

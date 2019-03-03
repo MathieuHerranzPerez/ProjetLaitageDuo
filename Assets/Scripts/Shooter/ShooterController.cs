@@ -6,7 +6,7 @@ public class ShooterController : MonoBehaviour
 {
 
     [SerializeField] private float Speed = 5f;
-    [SerializeField] private float LookSensitivity = 3f;
+    [SerializeField] private float LookSensitivity = 1f;
     public bool verticalMovementAllowed = true;
 
     private ShooterMotor motor;

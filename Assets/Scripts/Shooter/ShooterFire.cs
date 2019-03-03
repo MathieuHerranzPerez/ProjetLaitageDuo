@@ -112,13 +112,13 @@ public class ShooterFire : MonoBehaviour
             m_AmmoTypeDisplay.material = RedMaterial;
             cursorImage.color = redColor;
         }
-        if (Input.GetButtonDown(m_GreenShellSelectionButton))
+        if (Input.GetButtonDown(m_BlueShellSelectionButton))
         {
             ChangeAmmo(m_BlueShell);
             m_AmmoTypeDisplay.material = BlueMaterial;
             cursorImage.color = blueColor;
         }
-        if (Input.GetButtonDown(m_BlueShellSelectionButton))
+        if (Input.GetButtonDown(m_GreenShellSelectionButton))
         {
             ChangeAmmo(m_GreenShell);
             m_AmmoTypeDisplay.material = GreenMaterial;

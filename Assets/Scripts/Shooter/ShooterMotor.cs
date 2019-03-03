@@ -41,7 +41,8 @@ public class ShooterMotor : MonoBehaviour
         rb.MoveRotation(rb.rotation * Quaternion.Euler(rotation));
         if (cam != null)
         {
-            cam.transform.Rotate(-cameraRotation);
+            // - if mouse
+            cam.transform.Rotate(cameraRotation);
         }
     }
 

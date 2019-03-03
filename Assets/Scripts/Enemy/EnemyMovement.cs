@@ -34,7 +34,6 @@ public class EnemyMovement : MonoBehaviour
             // the enemy has reached the point
             if (Vector3.Distance(transform.position, target.position) <= delta)
             {
-                Debug.Log("reached"); //affD
                 Explode();
             }
         }

@@ -28,7 +28,6 @@ public class RessourceButton : MonoBehaviour
 
     public void IsClicked()
     {
-        Debug.Log("button clicked");
         if (PlayerStats.Money >= 10)
         {
             if (value == 0)

@@ -9,7 +9,6 @@ public class BlueEnemy : Enemy
         if (bullet.IsBlue())
         {
             TakeDamage(amount);
-            Debug.Log("tuched : " + stats.currentHP); // affD
         }
     }
 }
