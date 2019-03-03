@@ -16,7 +16,7 @@ public class EnemyMovement : MonoBehaviour
 
     // intern
     private Transform target;
-    private float delta = 0.3f; // if the enemy is at pos + or - this
+    private float delta = 0.6f; // if the enemy is at pos + or - this
     private Enemy enemy;
 
     void Start()
@@ -34,6 +34,7 @@ public class EnemyMovement : MonoBehaviour
             // the enemy has reached the point
             if (Vector3.Distance(transform.position, target.position) <= delta)
             {
+                Debug.Log("reached"); //affD
                 Explode();
             }
         }
