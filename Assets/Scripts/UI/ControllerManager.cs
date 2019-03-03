@@ -23,10 +23,10 @@ public class ControllerManager : MonoBehaviour
     void Update()
     {
         // tp control
-        checkControllerButton("controllerYbtn", northBtn);
-        checkControllerButton("controllerAbtn", southBtn);
-        checkControllerButton("controllerBbtn", eastBtn);
-        checkControllerButton("controllerXbtn", westBtn);
+        checkControllerButton("South", southBtn);
+        checkControllerButton("North", northBtn);
+        checkControllerButton("East", eastBtn);
+        checkControllerButton("West", westBtn);
 
         // select a ressource button
     }

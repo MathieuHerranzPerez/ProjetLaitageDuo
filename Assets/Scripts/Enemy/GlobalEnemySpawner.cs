@@ -68,7 +68,6 @@ public class GlobalEnemySpawner : MonoBehaviour
                     enemySpeed += enemySpeedDelta;
                     quadrantUnlockRate -= quadrantUnlockRateDelta;
                 }
-                Debug.Log("current quadrant unlocked :" + currentMaxQuadrantUnlocked); // affD
             }
         }
     }
