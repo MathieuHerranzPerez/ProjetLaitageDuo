@@ -1536,8 +1536,7 @@ AudioSource:
   m_GameObject: {fileID: 6832689362179391235}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 243707199831334910, guid: dba696630eb3e42478baa8ee4d5fe470,
-    type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f4a3331224b76f14d8906209f7d8a911, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.631
@@ -1749,7 +1748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -2249,7 +2248,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 8400000, guid: 87acbe5a61634084ea74d93a4e960118, type: 2}
+  m_Texture: {fileID: 8400000, guid: 6171ca412ef2bbb449130ca9aa76a843, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
