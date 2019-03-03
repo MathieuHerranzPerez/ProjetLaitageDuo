@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class RecipeManager : MonoBehaviour
 {
+    public static RecipeManager Instance;
     // Audio Source when completing a recipe and adding ammo of player
     public static AudioSource AmmoAudio;
     public AudioSource ammoAudio = null;
@@ -13,9 +15,11 @@ public class RecipeManager : MonoBehaviour
     public static int[] RecipeBlue = new int[4];
     public static int bonusAmo;
 
+
     public static Button[] patternButton1 = new Button[4];
     public static Button[] patternButton2 = new Button[3];
     public static Button[] patternButton3 = new Button[3];
+    public static Text notifier;
 
     public int[] startRecipeRed = new int[4];
     public int[] startRecipeGreen = new int[4];
@@ -26,14 +30,16 @@ public class RecipeManager : MonoBehaviour
     public Button[] startPatternButton2 = new Button[3];
     public Button[] startPatternButton3 = new Button[3];
 
-    
+    public Text startNotifier;
 
     // Start is called before the first frame update
     void Start()
     {
+        Instance = this;
         RecipeRed = startRecipeRed;
         RecipeGreen = startRecipeGreen;
         RecipeBlue = startRecipeBlue;
+        notifier = startNotifier;
         bonusAmo = startBonusAmmo;
 
         patternButton1 = startPatternButton1;
@@ -81,20 +87,57 @@ public class RecipeManager : MonoBehaviour
             PlayerStats.NbRedAmmo += bonusAmo;
             AmmoAudio.Play();
             Debug.Log("red munitions + 5 : " + PlayerStats.NbRedAmmo);
+            Notify("red");
         }
         if (CheckRecipe(RecipeGreen))
         {
             PlayerStats.NbGreenAmmo += bonusAmo;
             AmmoAudio.Play();
             Debug.Log("green munitions + 5 : " + PlayerStats.NbGreenAmmo );
+            Notify("green");
         }
         if (CheckRecipe(RecipeBlue))
         {
             PlayerStats.NbBlueAmmo += bonusAmo;
             AmmoAudio.Play();
             Debug.Log("blue munitions + 5 : " + PlayerStats.NbBlueAmmo);
+            Notify("blue");
         }
 
+    }
+
+    private static void Notify(string color)
+    {
+        string textToDisplay = "x" + bonusAmo + " " + color + " munitions created !";
+        if (color.CompareTo("red") == 0)
+            notifier.color = Color.red;
+        else if (color.CompareTo("blue") == 0)
+            notifier.color = Color.blue;
+        else if (color.CompareTo("green") == 0)
+            notifier.color = Color.green;
+
+        notifier.text = textToDisplay;
+
+        Instance.lauchTimer();
+
+
+    }
+
+    public void lauchTimer()
+    {
+        StartCoroutine(Timer());
+    }
+
+    public IEnumerator Timer()
+    {
+        float t = 0f;
+        while(t < 1f)
+        {
+            t += Time.deltaTime;
+            yield return null;
+        }
+        Debug.Log("regarde la");
+        notifier.text = "";
 
     }
 
